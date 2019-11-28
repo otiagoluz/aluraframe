@@ -1,16 +1,31 @@
 class NegotiationController {
-    
-    add(event) {
-        event.preventDefault();
+
+    constructor() {
         
         let $ = document.querySelector.bind(document);
+        this._inputDate = $('#date');
+        this._inputQuantidade = $('#quantidade');
+        this._inputValor = $('#valor');
         
-        let inputData = $('#data');
-        let inputQuantidade = $('#quantidade');
-        let inputValor = $('#valor');
-
-        console.log(inputData.value);
-        console.log(inputQuantidade.value);
-        console.log(inputValor.value);
     }
+  
+
+    add(event) {
+
+        event.preventDefault();
+
+        let negociacao = new Negociacao (
+            DateHelper.textToDate(this._inputDate.value),
+            this._inputQuantidade.value,
+            this._inputValor.value,
+        );
+
+        console.log(negociacao);
+        console.log(DateHelper.dateToText(negociacao.date));
+
+
+    }
+    
 }
+
+
