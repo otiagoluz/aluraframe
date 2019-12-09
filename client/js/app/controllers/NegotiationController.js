@@ -8,17 +8,15 @@ class NegotiationController {
         this._inputValor = $('#value');
         this._NegotiationList = new NegotiationList();
         
-    };
+    }
 
     add(event) {
-
         event.preventDefault();
         //add in the list
         this._NegotiationList.add(this._createNegotiation());
         //clean form 
         this._cleanForm();
-        console.log(this._NegotiationList.negotiations);
-    };
+    }
 
     //create negotiation
     _createNegotiation() {
@@ -27,14 +25,14 @@ class NegotiationController {
             this._inputAmount.value,
             this._inputValor.value,
         );
-    };
+    }
 
     _cleanForm() {
         this._inputDate.value = '';
         this._inputAmount.value = 1;
         this._inputValor.value = 0.0;
         this._inputDate.focus();
-    };
+    }
     
 }
 
