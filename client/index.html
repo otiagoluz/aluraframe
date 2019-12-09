@@ -5,6 +5,8 @@
     <title>Negotiation</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/bootstrap-theme.css">
+    <link rel="icon" href="css/money.png"
+
     
 </head>
 <body class="container">
@@ -41,28 +43,18 @@
     </div> 
     <br>
     <br>
-    
-    <table class="table table-hover table-bordered">
-        <thead>
-            <tr>
-                <th>DATE</th>
-                <th>AMOUNT</th>
-                <th>VALUE</th>
-                <th>VOLUME</th>
-            </tr>
-        </thead>
-        
-        <tbody>
-        </tbody>
-        
-        <tfoot>
-        </tfoot>
-    </table>
+
+    <div id="NegotiationView">
+
+    </div>
+
 
    <script src="js/app/models/Negotiation.js"> </script>
    <script src="js/app/controllers/NegotiationController.js"></script>
    <script src="js/app/helpers/DateHelper.js"></script>
    <script src="js/app/models/NegotiationList.js"></script>
+   <script src="js/app/views/NegotiationView.js"></script>
+   
    
    <script>
        let negotiationController = new NegotiationController();
