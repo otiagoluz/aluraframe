@@ -43,11 +43,9 @@ class NegotiationView {
 
     }
 
-
-
-
      //magic view JS inner
     update(model) {
+        
         this._element.innerHTML = this._template(model);
     }
 }

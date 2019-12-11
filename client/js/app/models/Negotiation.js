@@ -10,8 +10,8 @@ class Negotiation {
     }
 
     get volume() {
-        return this._amount * this._value
-        ;
+
+        return this._amount * this._value;
     }
 
     get date() {

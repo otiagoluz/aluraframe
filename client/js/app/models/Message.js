@@ -1,4 +1,4 @@
-class Messagem {
+class Message {  
     
     constructor(text='') {
         this._text = text;
@@ -14,5 +14,3 @@ class Messagem {
         this._text = text;
     }
 }
-
-let message = new Message('Flavio');
