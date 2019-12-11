@@ -7,9 +7,11 @@ class NegotiationController {
         this._inputAmount = $('#amount');
         this._inputValor = $('#value');
         this._NegotiationList = new NegotiationList();
-        this._NegotiationView = new NegotiationView($('#NegotiationView'));
 
+        this._NegotiationView = new NegotiationView($('#NegotiationView'));
         this._NegotiationView.update(this._NegotiationList);
+        this._message = new Message;
+        this._messageView = new MessageView($('#messageView'))
 
         
     }
@@ -18,6 +20,7 @@ class NegotiationController {
         event.preventDefault();
         //add in the list
         this._NegotiationList.add(this._createNegotiation());
+        this._menssage.text = 'Transation successfully added!';
         this._NegotiationView.update(this._NegotiationList);
         //clean form 
         this._cleanForm();
